@@ -9,8 +9,7 @@ node {
             echo 'mavennnnnnnnnnnnnnnnnn'
           sh 'mvn -Dmaven.test.failure.ignore=true install' 
       }stage('Deploy Tomcat') {
-            cp -v 'C:/Program Files (x86)/Jenkins/workspace/jenkinsfile-git-maven/target/HelloWorld.war' 
-            'C:/Program Files/Apache Software Foundation/Tomcat 8.5/webapps'
+            sh cp -v 'C:/Program Files (x86)/Jenkins/workspace/jenkinsfile-git-maven/target/HelloWorld.war' 'C:/Program Files/Apache Software Foundation/Tomcat 8.5/webapps'
             echo 'Deploy Tomcat'
       }
    }
