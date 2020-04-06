@@ -9,12 +9,12 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class HelloWorldController {
 
-	String message = "Welcome Diary Manager Team!";
+	String message = "Welcome DiaryManager Team!";
 
 	@RequestMapping("/hello")
 	public ModelAndView showMessage(
 			@RequestParam(value = "name", required = false, defaultValue = "World") String name) {
-		System.out.println("in controller");
+		System.out.println("In controller");
 
 		ModelAndView mv = new ModelAndView("helloworld");
 		mv.addObject("message", message);
